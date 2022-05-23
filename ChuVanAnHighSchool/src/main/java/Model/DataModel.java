@@ -1,8 +1,8 @@
 package Model;
 
 public class DataModel {
-    int id, age, GPA;
-    String name, address;
+    private int id, age, GPA;
+    private String name, address;
 
     public DataModel(int id, String name, int age, String address, int GPA) {
         this.id = id;

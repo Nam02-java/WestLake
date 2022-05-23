@@ -2,7 +2,11 @@ package Controller;
 
 import Model.DataModel;
 import Model.LoginModel;
+import View.DataView;
+import View.LoginView;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -14,9 +18,15 @@ import static Controller.PanelWestController.*;
 public class LoginController {
 
     private static ArrayList<LoginModel> arrayList_Login = new ArrayList<>();
-    public static Boolean check;
+    public static Boolean check ; //origin check = null
     public static int checkId_user;
     public static String checkUser_name;
+    protected LoginView loginview;
+
+    public LoginController(LoginView view) throws IOException {
+        this.loginview = view;
+        view.addLoginListener(new LoginListener());
+    }
 
     public static void setAction_ButtonLogin() throws SQLException, IOException {
         if (textFieldName.getText().equals("") && passwordField.getText().equals("")) {
@@ -71,6 +81,26 @@ public class LoginController {
                 return;
             }
             connection.close();
+        }
+    }
+
+    private class LoginListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            try {
+                setAction_ButtonLogin();
+                System.out.println(check);
+                if(check == true){
+                    loginview.setVisible(false);
+                    new DataView();
+                }else{
+                    return;
+                }
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

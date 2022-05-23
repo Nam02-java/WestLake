@@ -15,7 +15,7 @@ public class SignUpView extends JFrame {
     static public JButton buttonRegister, buttonPrevious;
     static public ImageIcon imageIcon;
 
-    public SignUpView() {
+    protected SignUpView() {
         setFrame();
         setButtonPrevious();
         setButtonRegister();

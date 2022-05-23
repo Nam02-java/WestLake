@@ -1,7 +1,7 @@
 package Model;
 
 public class SignUpModel {
-    String name, password;
+    private String name, password;
 
     public SignUpModel(String name, String password) {
         this.name = name;

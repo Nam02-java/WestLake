@@ -16,7 +16,7 @@ public class DataView extends JFrame {
         setButtonLogout();
     }
 
-    public void setComponent() throws IOException {
+    private void setComponent() throws IOException {
         setTitle("Data");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(300, 130, 1300, 700);
@@ -27,7 +27,7 @@ public class DataView extends JFrame {
 
     }
 
-    public void setButtonLogout() {
+    private void setButtonLogout() {
         buttonLogout.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {

@@ -14,7 +14,7 @@ public class PanelSouthView extends JPanel {
     public static JButton buttonLogout, buttonDisplay, button_Sort_By_GPA, button_Sort_By_Name;
     JPanel panel = new JPanel();
 
-    public PanelSouthView() {
+    protected PanelSouthView() {
         setComponent();
         setButtonDisplay();
         setButton_Sort_By_GPA();

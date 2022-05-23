@@ -13,7 +13,7 @@ public class PanelCenterView extends JPanel {
     public static Object[][] array2d;
     public static Object[] row;
 
-    public PanelCenterView() throws IOException {
+    protected PanelCenterView() throws IOException {
         setComponent();
         display_Data_After_Login();
     }

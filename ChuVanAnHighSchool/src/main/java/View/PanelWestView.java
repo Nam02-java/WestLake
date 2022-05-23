@@ -14,7 +14,7 @@ public class PanelWestView extends JPanel {
     public static JTextField textFieldName, textFieldAge, textFieldAddress, textFieldGPA;
     JButton buttonAdd, buttonDelete, buttonEdit, buttonSave;
 
-    public PanelWestView() throws IOException {
+    protected PanelWestView() throws IOException {
         setComponent();
         setButtonAdd();
         setButtonSave();

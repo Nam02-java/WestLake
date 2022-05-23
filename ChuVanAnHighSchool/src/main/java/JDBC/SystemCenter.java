@@ -4,9 +4,9 @@ import java.sql.*;
 
 public class SystemCenter {
 
-    public static String url = "jdbc:mysql://localhost:3306/students_data";
-    public static String user = "root";
-    public static String password = "123";
+    static String url = "jdbc:mysql://localhost:3306/students_data";
+    static String user = "root";
+    static String password = "123";
     public static Connection connection;
     public static Statement statement;
     public static ResultSet resultSet;

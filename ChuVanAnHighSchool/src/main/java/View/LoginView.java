@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 
 
-public class LoginView extends JFrame {
+public class LoginView extends JFrame implements ActionListener {
 
     static public JButton buttonLogin, buttonSignUp;
     static public JTextField textFieldName;
@@ -22,7 +22,7 @@ public class LoginView extends JFrame {
 
     public LoginView() {
         setFrame();
-        setButtonLogin();
+      //  setButtonLogin();
         setButtonSignUp();
     }
 
@@ -53,6 +53,7 @@ public class LoginView extends JFrame {
         labelPassword.setIcon(imageIcon = new ImageIcon("C:\\Users\\User\\Downloads\\icons8-password-24.png"));
         labelPassword.setBounds(10, 147, 24, 24);
         buttonLogin = new JButton("Login");
+        buttonLogin.addActionListener(this); //warning
         buttonLogin.setBounds(90, 200, 100, 25);
         buttonLogin.setForeground(Color.WHITE);
         buttonLogin.setBackground(Color.BLACK);
@@ -74,7 +75,7 @@ public class LoginView extends JFrame {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 try {
-                    LoginController.setAction_ButtonLogin();
+                    setAction_ButtonLogin();
                     if (check == true) {
                         setVisible(false);
                         new DataView();
@@ -100,5 +101,13 @@ public class LoginView extends JFrame {
 
     public static void showMessage_LoginView(String message) {
         JOptionPane.showMessageDialog(null, message, "Title", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public void addLoginListener(ActionListener listener) throws IOException {
+        buttonLogin.addActionListener(listener);
+    }
+
+    public void actionPerformed(ActionEvent actionEvent) {
+
     }
 }

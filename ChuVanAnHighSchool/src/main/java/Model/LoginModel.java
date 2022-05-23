@@ -1,8 +1,8 @@
 package Model;
 
 public class LoginModel {
-    int id_user;
-    String user_name, user_password;
+    private int id_user;
+    private String user_name, user_password;
 
     public LoginModel(int id_user, String user_name, String user_password) {
         this.id_user = id_user;

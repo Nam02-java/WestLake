@@ -1,4 +1,2 @@
-6 a 1 a 1
-6 aa 2 a 1
-6 b 2 b 2
-6 c 3 c 3
+1 nam 19 hanoi 100
+1 hung 19 hn 28
